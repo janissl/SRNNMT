@@ -1,0 +1,6 @@
+ngram_length: [4, ]
+feature_count: 150
+gru_width: 150
+max_sent_length: 200
+minibatch_size: 200
+epochs: 1000
