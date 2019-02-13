@@ -44,7 +44,8 @@ The sentence alignment itself is done using the content from the _'source_data_d
 On the contrary, the building of parallel corpora is done using the content from _'original_source_data_directory'_.
 If no additional preprocessing has been made on source files, both paths must be equal.
 * The _'work'_, _'aligned_idx'_ and _'result'_ directories are created automatically.
-* Aligned corpora are placed in the _'result'_ directory.<br>
+* Aligned corpora are placed in the _'result'_ directory.
+<br>
 
 __Note:__ It is not necessary to keep all automatically created subdirectories (_work_, _aligned_idx_, _result_) under
 the same root but it is much easier to track the alignment process in this way.
@@ -112,14 +113,16 @@ The same also applies to the _vocabulary\_name_.
 <br><br>
 
 __Note:__ The current set of scripts may be also run under UNIX/Linux OS.
-For this purpose, Bash files similar to _run\_training.bat_ and _run\_alignment.bat_ must be executed.<br><br>
+For this purpose, Bash files similar to _run\_training.bat_ and _run\_alignment.bat_ must be executed.
+<br><br>
 
 TODO: continue development of _build\_dictionaries.py_<br>
 At the moment, this script is just a placeholder. Dictionaries can be built using [bsa-wrapper](https://github.com/janissl/bsa-wrapper):
 execute the step 1 in the _run\_bsa.bat_ script for both language directions i.e. en-fr and fr-en for instance,
 find the _model-one_ files in the _[...]\work\sent\_align\en-fr_ and _[...]\work\sent\_align\fr-en_ directories, reorder
 columns into the following order: source_word, target_word, probability, and save the output files as _${dictionary\_name}.e2f_
-(for the fr-en language direction) and _${dictionary\_name}.f2e_ (for the en-fr language direction).<br><br>
+(for the fr-en language direction) and _${dictionary\_name}.f2e_ (for the en-fr language direction).
+<hr>
 
 ##### References:
 [Finding Translation Pairs from Unordered Internet Text](https://blogs.helsinki.fi/language-technology/files/2017/09/FINMT2017_Kanerva.pdf)
