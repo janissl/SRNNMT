@@ -8,9 +8,8 @@ Based on [TurkuNLP/SRNNMT](https://github.com/TurkuNLP/SRNNMT) as well as [csr_c
 <pre><code>
 ${corpus_title}
 |-- source
-|   |-- snt
-|       |-- ${title}_${source_lang}.snt
-|       |-- ${title}_${target_lang}.snt
+|   |-- ${title}_${source_lang}.snt
+|   |-- ${title}_${target_lang}.snt
 |-- work
 |   |-- ${source_lang}-${target_lang}
 |       |-- ${title}_${source_lang}.snt
@@ -33,10 +32,9 @@ ${corpus_title}
   * Cython
   * numpy
   * scikit-learn
-  * scipy
   * tensorflow
   * Keras
-* Before running the shell script, put your source files in _${corpus\_title}/source/snt_ directory.
+* Before running the shell script, put your source files in _${corpus\_title}/source_ directory.
 * The content of source files must be segmented in sentences (one sentence per line).
 * Filenames of input files must have the following pattern: _${title}\_${lang}.snt_ (e.g. _document\_en.snt_).
 * Parallel files must have identical titles (e.g. _article\_001\_en.snt_, _article\_001\_fr.snt_).
@@ -44,7 +42,6 @@ ${corpus_title}
 The 'original_source_data_directory' is used for files containing sentences in natural language (i.e. unmodified sentences).
 The _'source_data_directory'_ is used for additionaly preprocessed files originated from the 'original_source_data_directory'
 (e.g. stemmed files, additionally tokenized files etc.).
-In both directories, files must be stored in the _'snt'_ subfolder.
 The sentence alignment itself is done using the content from the _'source_data_directory'_.
 On the contrary, the building of parallel corpora is done using the content from _'original_source_data_directory'_.
 If no additional preprocessing has been made on source files, both paths must be equal.
