@@ -79,9 +79,9 @@ def write_parallel_index_files(conf):
                         os.path.join(lang_pair_alignment_index_directory,
                                      '{}.{}.idx'.format(pair_title, conf['target_language']))]
 
-            orig_docs = [os.path.join(os.path.join(conf['source_data_directory'], 'snt'),
+            orig_docs = [os.path.join(conf['preprocessed_source_data_directory'],
                                       '{}_{}.snt'.format(pair_title, conf['source_language'])),
-                         os.path.join(os.path.join(conf['source_data_directory'], 'snt'),
+                         os.path.join(conf['preprocessed_source_data_directory'],
                                       '{}_{}.snt'.format(pair_title, conf['target_language']))]
 
             for i in range(len(aligned_docs)):

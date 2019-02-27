@@ -110,7 +110,7 @@ def vectorize(properties_path='props.yml', io_argument_path='io_args.yml'):
     print(output_size, max_sent_len, file=sys.stderr)
 
     # build matrices
-    for entry in os.scandir(os.path.join(args['source_data_directory'], 'snt')):
+    for entry in os.scandir(args['preprocessed_source_data_directory']):
         if not (entry.is_file() and entry.name.endswith('_{}.snt'.format(args['source_language']))):
             continue
 
