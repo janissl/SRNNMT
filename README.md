@@ -40,7 +40,7 @@ ${corpus_title}
 * Parallel files must have identical titles (e.g. _article\_001\_en.snt_, _article\_001\_fr.snt_).
 * There are two source data directories - _'original_source_data_directory'_ and _'preprocessed_source_data_directory'_ - specified in the YAML file.
 The 'original_source_data_directory' is used for files containing sentences in natural language (i.e. unmodified sentences).
-The _'preprocessed_source_data_directory'_ is used for additionaly preprocessed files originated from the 'original_source_data_directory'
+The _'preprocessed_source_data_directory'_ is used for additionaly preprocessed files originated from the _'original_source_data_directory'_
 (e.g. stemmed files, additionally tokenized files etc.).
 The sentence alignment itself is done using the content from the _'preprocessed_source_data_directory'_.
 On the contrary, the building of parallel corpora is done using the content from _'original_source_data_directory'_.
