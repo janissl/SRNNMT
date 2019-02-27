@@ -8,19 +8,24 @@ Based on [TurkuNLP/SRNNMT](https://github.com/TurkuNLP/SRNNMT) as well as [csr_c
 <pre><code>
 ${corpus_title}
 |-- source
-    |-- snt
-            ${title}_${lang}.snt
+|   |-- snt
+|       |-- ${title}_${source_lang}.snt
+|       |-- ${title}_${target_lang}.snt
 |-- work
-    |-- ${source_lang}-${target_lang}
-            ${title}_${lang}.snt.aligned
+|   |-- ${source_lang}-${target_lang}
+|       |-- ${title}_${source_lang}.snt
+|       |-- ${title}_${target_lang}.snt
+|       |-- ${title}_${source_lang}.snt.aligned
+|       |-- ${title}_${target_lang}.snt.aligned
 |-- aligned_idx
-    |-- ${source_lang}-${target_lang}
-            ${title}.${lang}.idx
+|   |-- ${source_lang}-${target_lang}
+|       |-- ${title}.${source_lang}.idx
+|       |-- ${title}.${target_lang}.idx
 |-- result
-        ${corpus_title}.${source_lang}-${target_lang}.${source_lang}
-        ${corpus_title}.${source_lang}-${target_lang}.${target_lang}
-        ${corpus_title}.unique.${source_lang}-${target_lang}.${source_lang}
-        ${corpus_title}.unique.${source_lang}-${target_lang}.${target_lang}
+    |-- ${corpus_title}.${source_lang}-${target_lang}.${source_lang}
+    |-- ${corpus_title}.${source_lang}-${target_lang}.${target_lang}
+    |-- ${corpus_title}.unique.${source_lang}-${target_lang}.${source_lang}
+    |-- ${corpus_title}.unique.${source_lang}-${target_lang}.${target_lang}
 </code></pre>
 
 * Install the following dependencied using the `python -m pip install ${module_name}` command if necessary:
@@ -113,7 +118,7 @@ The same also applies to the _vocabulary\_name_.
 <br><br>
 
 __Note:__ The current set of scripts may be also run under UNIX/Linux OS.
-For this purpose, Bash files similar to _run\_training.bat_ and _run\_alignment.bat_ must be executed.
+For this purpose, Bash scripts similar to _run\_training.bat_ and _run\_alignment.bat_ must be executed.
 <br><br>
 
 TODO: continue development of _build\_dictionaries.py_<br>
